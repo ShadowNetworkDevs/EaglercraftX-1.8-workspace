@@ -250,6 +250,10 @@ public class EffectRenderer {
 	 * Renders all current particles. Args player, partialTickTime
 	 */
 	public void renderParticles(Entity entityIn, float partialTicks, int pass) {
+		if (net.minecraft.client.QolSettings.noParticles) {
+			return;
+		}
+		
 		float f = ActiveRenderInfo.getRotationX();
 		float f1 = ActiveRenderInfo.getRotationZ();
 		float f2 = ActiveRenderInfo.getRotationYZ();

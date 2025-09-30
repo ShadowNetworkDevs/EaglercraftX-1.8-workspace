@@ -439,6 +439,10 @@ public class EntityRenderer implements IResourceManagerReloadListener {
 	}
 
 	private void hurtCameraEffect(float partialTicks) {
+		if (net.minecraft.client.QolSettings.noHurtCam) {
+			return;
+		}
+
 		if (this.mc.getRenderViewEntity() instanceof EntityLivingBase) {
 			EntityLivingBase entitylivingbase = (EntityLivingBase) this.mc.getRenderViewEntity();
 			float f = (float) entitylivingbase.hurtTime - partialTicks;
@@ -587,6 +591,12 @@ public class EntityRenderer implements IResourceManagerReloadListener {
 	 * sets up projection, view effects, camera position/rotation
 	 */
 	private void setupCameraTransform(float partialTicks, int pass) {
+		if (net.minecraft.client.QolSettings.fullbright) {
+			this.mc.gameSettings.gammaSetting = 1000.0F; // Max brightness for fullbright
+		} else {
+			this.mc.gameSettings.gammaSetting = 1.0F; // Default brightness
+		}
+		
 		this.farPlaneDistance = (float) (this.mc.gameSettings.renderDistanceChunks * 16 + 16);
 		GlStateManager.matrixMode(GL_PROJECTION);
 		GlStateManager.loadIdentity();

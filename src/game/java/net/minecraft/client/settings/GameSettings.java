@@ -1435,6 +1435,7 @@ public class GameSettings {
 		FBO_ENABLE("options.fboEnable", false, true), RENDER_CLOUDS("options.renderClouds", false, false),
 		GRAPHICS("options.graphics", false, false), AMBIENT_OCCLUSION("options.ao", false, false),
 		GUI_SCALE("options.guiScale", false, false), PARTICLES("options.particles", false, false),
+		PARTICLES_MINIMAL("options.particlesMinimal", false, false), PARTICLES_ALL("options.particlesAll", false, false),
 		CHAT_VISIBILITY("options.chat.visibility", false, false), CHAT_COLOR("options.chat.color", false, true),
 		CHAT_LINKS("options.chat.links", false, true), CHAT_OPACITY("options.chat.opacity", true, false),
 		CHAT_LINKS_PROMPT("options.chat.links.prompt", false, true), SNOOPER_ENABLED("options.snooper", false, true),
