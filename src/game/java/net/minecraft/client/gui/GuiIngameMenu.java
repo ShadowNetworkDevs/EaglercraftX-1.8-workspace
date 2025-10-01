@@ -104,7 +104,7 @@ public class GuiIngameMenu extends GuiScreen {
 				I18n.format("gui.achievements", new Object[0]), PauseMenuCustomizeState.icon_achievements_L,
 				PauseMenuCustomizeState.icon_achievements_L_aspect, PauseMenuCustomizeState.icon_achievements_R,
 				PauseMenuCustomizeState.icon_achievements_R_aspect));
-		this.buttonList.add(new GuiButton(99, this.width / 2 - 100, this.height / 4 + 144, "QoL Settings"));
+		this.buttonList.add(new GuiButton(99, this.width / 2 - 100, this.height / 4 + 144, "Eclipse+ Mods"));
 		this.buttonList.add(new GuiButtonWithStupidIcons(6, this.width / 2 + 2, this.height / 4 + 48 + b0, 98, 20,
 				I18n.format("gui.stats", new Object[0]), PauseMenuCustomizeState.icon_statistics_L,
 				PauseMenuCustomizeState.icon_statistics_L_aspect, PauseMenuCustomizeState.icon_statistics_R,
